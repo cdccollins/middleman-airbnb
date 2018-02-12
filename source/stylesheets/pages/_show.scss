@@ -1,0 +1,85 @@
+.show {
+  background-color: white;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flat-details {
+  display: flex;
+  padding: 30px;
+}
+
+.flat-owner {
+  .img-circle {
+    width: 80px;
+  }
+  p {
+    font-size: 15px;
+    color: $gray;
+  }
+  padding: 20px;
+}
+
+.flat-description {
+  h1 {
+    font-size: 18px;
+    color: black;
+  }
+  p {
+    font-size: 14px;
+    color: $gray
+  }
+  .fa-star {
+    font-size: 14px;
+    color: $yellow;
+  }
+}
+
+h4 {
+  color: black;
+}
+
+.booking-form {
+    margin: 20px 0;
+    margin-right: 0;
+    background-color: $light-gray;
+    padding: 15px;
+    border-radius: 3px;
+    display: block;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.more-info {
+  h2 {
+    color: black;
+    font-size: 18px;
+  }
+  p {
+    color: black;
+    font-size: 15px;
+  }
+  background-color: $light-gray;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content-stuff {
+  margin: 50px 0;
+  width: 1100px;
+}
+
+li {
+  font-size: 12px;
+  color: $gray;
+  padding: 2px 0;
+  margin-left: 30px;
+  letter-spacing: 0.6px;
+}

@@ -1,0 +1,102 @@
+<!-- source/flats/show.html.erb -->
+<div class="show">
+<!-- Access data.flats with owner's name as key -->
+  <% flat = data.flats[owner] %>
+
+  <!-- Inject flat data in template -->
+  <div class="banner" style="background-image: url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>'); height: 50vh; background-position: center">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+        <div class="flat-details">
+          <div class="flat-owner text-center">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle"%>
+            <p><%= flat.username %></p>
+          </div>
+          <div class="flat-description">
+            <h1><%= flat.description %></h1>
+            <p><%= flat.city_name %></p>
+            <% flat.rating.times do %>
+              <i class="fa fa-star"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <form action="#" class="booking-form">
+          <h4>Book this flat</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <input type="text" class="form-control" placeholder="Check-in">
+            </div>
+            <div class="col-xs-6">
+              <input type="text" class="form-control" placeholder="Check-out">
+            </div>
+
+            <div class="form-group col-xs-12">
+              <select class="form-control">
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+              </select>
+            </div>
+            <div class="col-xs-12">
+              <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%;">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="more-info">
+    <div class="content-stuff">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h2>About this flat</h2>
+          <p><%= flat.long_description %>
+          </p>
+          <hr>
+          <div class="row" id="flat-data">
+            <div class="col-xs-12 col-sm-2" style="font-size: 13px;">
+              The Space
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <ul class="list-unstyled">
+                <li>Accommodates: <strong><%= flat.accommodates %></strong></li>
+                <li>Bathrooms: <strong><%= flat.bathrooms %></strong></li>
+                <li>Bedrooms: <strong><%= flat.bedrooms %></strong></li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <ul class="list-unstyled">
+                <li>Property Type: <strong><%= flat.property_type %></strong></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row" id="flat-data">
+            <div class="col-xs-12 col-sm-2" style="font-size: 13px;">
+              Amenities
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <ul class="list-unstyled">
+                <li><% if flat.wifi %><i class="fas fa-wifi"></i> <strong>Wifi</strong>
+                    <% end %>
+                </li>
+                <li><% if flat.drink %><i class="fas fa-glass-martini"></i><strong> Welcome Drink </strong>
+                    <% end %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
