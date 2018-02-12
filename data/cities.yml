@@ -1,0 +1,12 @@
+london:
+  name: "London"
+  user: "Seb's Home"
+  description: "Small flat"
+paris:
+  name: "Paris"
+  user: "Boris' Home"
+  description: "Small flat"
+berlin:
+  name: "Berlin"
+  user: "Romain's Home"
+  description: "Large flat"
