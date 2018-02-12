@@ -1,12 +1,15 @@
 london:
   name: "London"
   user: "Seb's Home"
+  username: "ssaunier"
   description: "Small flat"
 paris:
   name: "Paris"
   user: "Boris' Home"
+  username: "papillard"
   description: "Small flat"
 berlin:
   name: "Berlin"
   user: "Romain's Home"
+  username: "random"
   description: "Large flat"
